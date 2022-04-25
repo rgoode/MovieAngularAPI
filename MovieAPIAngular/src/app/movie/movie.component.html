@@ -1,0 +1,9 @@
+<p>movie works!</p>
+<div *ngIf="movie$ | async as movie; else waitingForMovies">
+<h1>Title: {{movie.title</h1>
+</div>
+
+
+<ng-template #waitingForMovies>
+    <h1>Loading Movies :)</h1>
+</ng-template>

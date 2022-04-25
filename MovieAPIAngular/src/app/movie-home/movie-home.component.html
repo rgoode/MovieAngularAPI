@@ -1,0 +1,14 @@
+<p>movie-home works!</p>
+<ul *ngIf="movies; else waitingForMovies">
+    <li *ngFor="let movie of movies">
+        <p>Title:
+            <a [routerLink]="['/movie', movie.movieId]">{{movie.movieTitle}}</a>
+            
+        </p>
+    </li>
+
+</ul>
+
+<ng-template #waitingForMovies>
+    <h1>Loading Movies :)</h1>
+</ng-template>
